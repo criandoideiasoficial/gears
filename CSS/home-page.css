@@ -7,7 +7,7 @@ body{
 }
 body::before{ /* piseudono form elemento virtual  */
  content: "";
- background-image: url('img/199344.jpg');
+ background-image: url('../img/199344.jpg');
  background-repeat: no-repeat;  /* não repetir  */
  background-position: center;  /* sempre no centro  */
  background-size: cover;  /* sempre tenha o tamanho da página  */
