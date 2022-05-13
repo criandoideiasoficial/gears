@@ -1,5 +1,5 @@
-@import url('/CSS/reset.css');
-@import url('/CSS/global.css');
+@import url('CSS/reset.css');
+@import url('CSS/global.css');
 
 /* estilizando página home */
 body{
@@ -7,7 +7,7 @@ body{
 }
 body::before{ /* piseudono form elemento virtual  */
  content: "";
- background-image: url('/img/199344.jpg');
+ background-image: url('img/199344.jpg');
  background-repeat: no-repeat;  /* não repetir  */
  background-position: center;  /* sempre no centro  */
  background-size: cover;  /* sempre tenha o tamanho da página  */
@@ -143,15 +143,15 @@ body::before{ /* piseudono form elemento virtual  */
 
 /* quando js for ativo de passar mouse fundo vai trocar */
 body#gears-man-01-hovered::before{
-   background-image: url('/img/gears-of-war-54k-5j.jpg'); 
+   background-image: url('img/gears-of-war-54k-5j.jpg'); 
 }
 
 body#gears-man-02-hovered::before{
-    background-image: url('/img/d9fjj53-ad6d9036-e88f-47c7-ae2e-2cf7216a4995.jpg'); 
+    background-image: url('img/d9fjj53-ad6d9036-e88f-47c7-ae2e-2cf7216a4995.jpg'); 
  }
 
  body#gears-man-03-hovered::before{
-    background-image: url('/img/GXHQpDcWnCgtPAruZ2NZrM.jpg'); 
+    background-image: url('img/GXHQpDcWnCgtPAruZ2NZrM.jpg'); 
  }
 
 /* quando no [] pedo atributo especifico para tirar a cor */ 

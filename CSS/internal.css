@@ -1,5 +1,5 @@
-@import url('/CSS/reset.css');
-@import url('/CSS/global.css');
+@import url('CSS/reset.css');
+@import url('CSS/global.css');
 
 /* pagina toda */
 .s-wrapper{
@@ -24,7 +24,7 @@
     height: 100%;
     width: 100%;
     background-color: gray;
-    background-image: url('/img/b4f4710f6684538f8438e2ecf2a33b5b.jpg');
+    background-image: url('img/b4f4710f6684538f8438e2ecf2a33b5b.jpg');
     background-repeat: no-repeat;  /* não repetir  */
     background-position: center;  /* sempre no centro  */
     background-size: cover;  /* sempre tenha o tamanho da página  */
