@@ -1,0 +1,100 @@
+@import url('/CSS/reset.css');
+@import url('/CSS/global.css');
+
+/* pagina toda */
+.s-wrapper{
+    display: flex;
+    height: 100vh;
+    flex-flow: row nowrap;
+}
+
+/* coluna da esquerda ou menu */
+.s-wrapper .s-left-columm{
+    width: 100px;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* coluna da direita ou copo da pagina */
+.s-wrapper .s-main-contenet{
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    background-image: url('/img/b4f4710f6684538f8438e2ecf2a33b5b.jpg');
+    background-repeat: no-repeat;  /* não repetir  */
+    background-position: center;  /* sempre no centro  */
+    background-size: cover;  /* sempre tenha o tamanho da página  */
+}
+
+/* navegação menu */
+.navigator {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+/* margem */
+.navigator ul li {
+    margin: 60px 0;
+}
+
+/* margem  0 para primeiro item*/
+.navigator ul li:first-child {
+    margin-top: 0;
+}
+
+/* margem  0 para ultimo item*/
+.navigator ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* menu configurando as bolinhas*/
+.navigator ul li a{
+    color: white;
+    border:  solid 2px white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+/* colocando uma linha no menu */
+.navigator::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    z-index: 0;
+
+}
+
+/* eixo z e ordem 0 primeiro 1 sobrepom*/
+.navigator ul {
+    z-index: 1;
+}
+
+/* quando passar mouse muda cor de fundo*/
+.navigator ul li a:hover, 
+.navigator ul li a.active{
+ color: var(--primary-color);
+ background-color: white;
+}
+
+
+.navigator .navigator__icon {
+    position: absolute;
+    top: -20px;
+    background-color: black;
+
+}
