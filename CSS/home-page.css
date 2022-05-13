@@ -1,0 +1,170 @@
+@import url('/CSS/reset.css');
+@import url('/CSS/global.css');
+
+/* estilizando página home */
+body{
+    background-color: var(--primary-color);
+}
+body::before{ /* piseudono form elemento virtual  */
+ content: "";
+ background-image: url('/img/199344.jpg');
+ background-repeat: no-repeat;  /* não repetir  */
+ background-position: center;  /* sempre no centro  */
+ background-size: cover;  /* sempre tenha o tamanho da página  */
+ width: 100%;
+ height: 100%;
+ position: absolute; /* sobreponha o elemento  */
+ opacity: 0.2;  /* transparencia  */
+ transition: background-image 1s ease-in-out, opacity 1s ease-in-out; /* mudart imagem com efeito de transição mesmo para opacidade  */
+
+}
+
+/* menu */
+.s-menu {
+    padding: 1rem 0; /* ajudando pesso quando uza zoom */
+    width: 100%;
+    text-align: center;
+    position: relative; /* menu sobreponha o fundo */
+}
+
+.s-menu__item {
+    display: inline-block; /* itens lado a lado */
+    text-transform: uppercase; /* letras em caixa alta */
+    margin: 0 1.25rem;
+}
+
+.s-menu__icon {
+    width: 2.5rem;
+    margin:  0 1.25rem;
+    vertical-align: middle;
+ 
+}
+
+
+/* card  */
+.s-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.s-card {
+    border: 0.5rem solid white;
+    width: calc(100% / 3 - 8%); /* calculo tem q ser todo separado */
+    height: 70vh;
+    position: relative;
+    transition: filter .5s ease-in-out; /* efeito de transição meio segundo no filtro */
+
+}
+
+.s-card__background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ocupe todo o espaço */
+    position: absolute;
+    opacity: 1;
+    transition: opacity  1s ease-in-out;
+}
+
+.s-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain ; /* fique dentro do card */
+    position: relative;
+    transition:  1s ease-in-out;
+}
+
+.s-card__title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transition: bottom 1s ease-in-out;
+}
+
+/* controle do slider */
+.s-controller{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+
+}
+.s-controller__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: var(--primary-color); /* cor padrao*/
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer; /* ponteiro do mouse */
+    z-index: 1; /* linha nao cobrir circulos */
+   transition: transform 0.3s ease-in-out; /* quando for fazer transição do transform no houve ele demore 3 micro segundos */
+
+}
+
+.s-controller__button:hover{
+    transform: scale(1.1);
+}
+
+/* pegando o segundo elemento que tem mesma classe */
+.s-controller__button:nth-child(2){
+    margin: 0 3.75rem;
+
+}
+
+.s-controller__line{
+    background-color: white;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+
+}
+
+/* anamiação passar mouse*/
+.s-card--hovered .s-card__background {
+   cursor: pointer;
+   opacity: 0;
+
+}
+/* anamiação aumentar imegem personagem*/
+.s-card--hovered .s-card__image  {
+    transform:scale(1.3) ;
+    filter: drop-shadow(30px 10px 4px rgba(0,0,0, .5)) ; /* sombra*/
+}
+
+/* quando js for ativo de passar mouse fundo vai trocar */
+body#gears-man-01-hovered::before{
+   background-image: url('/img/gears-of-war-54k-5j.jpg'); 
+}
+
+body#gears-man-02-hovered::before{
+    background-image: url('/img/d9fjj53-ad6d9036-e88f-47c7-ae2e-2cf7216a4995.jpg'); 
+ }
+
+ body#gears-man-03-hovered::before{
+    background-image: url('/img/GXHQpDcWnCgtPAruZ2NZrM.jpg'); 
+ }
+
+/* quando no [] pedo atributo especifico para tirar a cor */ 
+body[id^="gears-man-"]::before{
+    opacity: 1;
+}
+
+/* efeito de filtro */ 
+body[id^="gears-man-"] .s-card:not(.s-card--hovered){
+    filter: grayscale(100%);
+}
+
+/* faze com que titulo do card fique no meio quando passar mouse */
+.s-card--hovered .s-card__title{
+    bottom: 50%;
+}
