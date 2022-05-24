@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../CSS/internal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
     <title>Gears of War 1</title>
 </head>
 
@@ -14,7 +15,7 @@
         <div class="s-left-columm">
             <nav class="navigator">
                 <div class="navigator__icon">
-                    <a href="../../index.html"> <img src="/img/icon/logo.svg" width="50rem" alt="Gears 1"></a>
+                    <a href="../../index.html"> <img src="../../img/icon/logo.svg" width="50rem" alt="Gears 1"></a>
                 </div>
                 <ul>
                     <li><a href="#01">01</a></li>
@@ -68,18 +69,19 @@
             <div class="s-main-contant_bottom">
                 <div class="gallery">
                     <ul>
-                        <li><a href="#">
-                                <img src="../../img/g1.jpg"  alt="">
+                        <!-- data-fancybo e função que chama slide galaria do cdn fancybox -->
+                        <li><a data-fancybox href="../../img/g1.jpg">
+                                <img src="../../img/g1.jpg" alt="">
                             </a>
                         </li>
-                        <li><a href="#">
-                            <img src="../../img/g1.jpg"  alt="">
-                        </a>
-                    </li>
-                    <li><a href="#">
-                        <img src="../../img/g1.jpg" alt="">
-                    </a>
-                </li>
+                        <li><a data-fancybox href="../../img/g1.jpg">
+                                <img src="../../img/g1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li><a data-fancybox href="../../img/g1.jpg">
+                                <img src="../../img/g1.jpg" alt="">
+                            </a>
+                        </li>
 
 
                     </ul>
@@ -90,6 +92,11 @@
         </div>
 
     </div>
+    <!-- js para galeria -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script>
+        //  JavaScript will go here
+      </script>
 
 </body>
 
