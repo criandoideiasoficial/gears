@@ -3,7 +3,7 @@ a.link-button{
     display: flex;
     align-items: center;
     justify-items: center;
-    color: white;
+    color: white;    
 }
 
 a.link-button .icon{
@@ -31,4 +31,7 @@ a.link-button .icon .play-icon{
 }
 a.link-button .label{
     margin-left: 10px;
+}
+.s-link{
+    margin-top: 15px;
 }

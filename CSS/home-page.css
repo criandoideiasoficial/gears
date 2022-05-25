@@ -15,7 +15,7 @@ body::before{ /* piseudono form elemento virtual  */
  height: 100%;
  position: absolute; /* sobreponha o elemento  */
  opacity: 0.2;  /* transparencia  */
- transition: background-image 1s ease-in-out, opacity 1s ease-in-out; /* mudart imagem com efeito de transição mesmo para opacidade  */
+ transition: background-image 1s ease-in-out, opacity 1s ease-in-out; /* mudar imagem com efeito de transição mesmo para opacidade  */
 
 }
 
@@ -48,13 +48,29 @@ body::before{ /* piseudono form elemento virtual  */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    perspective: 3000px ;
 }
 .s-card {
     border: 0.5rem solid white;
-    width: calc(100% / 3 - 8%); /* calculo tem q ser todo separado */
+    width: 100%; /* calculo tem q ser todo separado */
     height: 70vh;
-    position: relative;
+    position: absolute;
     transition: filter .5s ease-in-out; /* efeito de transição meio segundo no filtro */
+
+}
+/* os cards pegando o primeiro elemento e organizando */
+.s-card:nth-child(1){
+    transform: rotateY(0deg) translateZ(50vw);
+
+}
+
+.s-card:nth-child(2){
+    transform: rotateY(120deg) translateZ(50vw);
+
+}
+
+.s-card:nth-child(3){
+    transform: rotateY(240deg) translateZ(50vw);
 
 }
 
@@ -87,11 +103,13 @@ body::before{ /* piseudono form elemento virtual  */
 
 /* controle do slider */
 .s-controller{
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+    bottom: 1.5rem;
+    width: 100%;
 
 }
 .s-controller__button{
@@ -122,6 +140,15 @@ body::before{ /* piseudono form elemento virtual  */
 
 }
 
+/* quando botao for ativo ele muda */
+.s-controller__button--active{
+    background-color: white;
+    color: var(--primary-color);
+    border: 0.1875rem solid var(--primary-color);
+    outline: 0.125rem solid white; /* criando uma segunda borda */
+}
+
+
 .s-controller__line{
     background-color: white;
     width: 50%;
@@ -144,11 +171,11 @@ body::before{ /* piseudono form elemento virtual  */
 
 /* quando js for ativo de passar mouse fundo vai trocar */
 body#gears-man-01-hovered::before{
-   background-image: url('../img/card5.jpg'); 
+   background-image: url('../img/card4.jpg'); 
 }
 
 body#gears-man-02-hovered::before{
-    background-image: url('../img/card4.jpg'); 
+    background-image: url('../img/card5.jpg'); 
  }
 
  body#gears-man-03-hovered::before{
@@ -168,4 +195,11 @@ body[id^="gears-man-"] .s-card:not(.s-card--hovered){
 /* faze com que titulo do card fique no meio quando passar mouse */
 .s-card--hovered .s-card__title{
     bottom: 50%;
+}
+.s-card-carousel{
+    display: flex;
+    justify-content: center;
+    width: calc(100vw / 3 - 10%);
+    transform-style: preserve-3d ; /* aplicando efeito 3d no css */
+    transition: transform 0.4s ease-in-out ; /* velocidade de mudar foto do slide dos card */
 }

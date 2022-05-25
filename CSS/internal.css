@@ -156,3 +156,8 @@
     background-image: url('../img/zy2PaI.webp');
     background-size: cover;
 }
+
+.s-wrapper video{
+    position: fixed;
+    width: 100%;
+}

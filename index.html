@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/home-page.css">
-    <script src="js/card-hover-animation.js"></script>
+    <script src="js/script.js"></script>
     <title>GEARS OF WAR - POR OSMAR</title>
 </head>
 
@@ -17,41 +17,47 @@
             <li class="s-menu__item"> <a href="pages/gears1/gears1.html">Gears 1</a></li>
             <li class="s-menu__item"> <a href="/">Gears 2</a></li>
             <li class="s-menu__item"> <a href="/">Gears 3</a></li>
-            <li class="s-menu__item s-menu__icon"> <img src="img/icon/logo.svg" width="50.5rem"  alt="Gears of war"></li>
+            <li class="s-menu__item s-menu__icon"> <img src="img/icon/logo.svg" width="50.5rem" alt="Gears of war"></li>
             <li class="s-menu__item"> <a href="/">Gears Jugament</a></li>
             <li class="s-menu__item"> <a href="/">Gears 4</a></li>
             <li class="s-menu__item"> <a href="/">Gears 5</a></li>
-            
+
         </ul>
     </nav>
-<!-- cards -->
+    <!-- cards -->
     <div class="s-container">
-        <a href="pages/gears1/gears1.html" class="s-card" id="gears-man-01">
-            <img src="img/card5.jpg" class="s-card__background" alt="">
-            <img src="img/JDFenixGears4.png" class="s-card__image" alt="JD">
-            <h1 class="s-card__title">JD Fenix</h1>
-        </a>
+        <div class="s-card-carousel" style=" transform: translateZ(-40vw) rotateY(0deg);">
+          
 
-        <a href="" class="s-card" id="gears-man-02">
-            <img src="img/card4.jpg" class="s-card__background"  alt="">
-            <img src="img/marcos2.png" class="s-card__image"  alt="Marcus Fenix">
-            <h1 class="s-card__title">Marcus Fenix</h1>
-        </a>
+            <a href="" class="s-card" id="gears-man-01">
+                <img class="s-card__background" src="img/card4.jpg" alt="">
+                <img class="s-card__image" src="img/marcos2.png" alt="Marcus Fenix">
+                <h1 class="s-card__title">Marcus Fenix</h1>
+            </a>
 
-        <a href="" class="s-card" id="gears-man-03">
-            <img src="img/card6.jpg" class="s-card__background"  alt="">
-            <img src="img/kait2.png" class="s-card__image" alt="Kait">
-            <h1 class="s-card__title">Kait</h1>
-        </a>
-        
+            <a class="s-card" href="pages/gears1/gears1.html" id="gears-man-02">
+                <img class="s-card__background" src="img/card5.jpg" alt="">
+                <img class="s-card__image" src="img/JDFenixGears4.png" alt="JD">
+                <h1 class="s-card__title">JD Fenix</h1>
+            </a>
+
+            <a href="" class="s-card" id="gears-man-03">
+                <img class="s-card__background" src="img/card6.jpg" alt="">
+                <img class="s-card__image" src="img/kait2.png" alt="Kait">
+                <h1 class="s-card__title">Kait</h1>
+            </a>
+        </div>
     </div>
 
     <!-- controle do slider -->
     <div class="s-controller">
-       <div class="s-controller__button">01</div>
-       <div class="s-controller__button">02</div>
-       <div class="s-controller__button">03</div>
-       <div class="s-controller__line"></div>
+
+        <div id="1"  onclick="selectCarouselItem(this)" class="s-controller__button s-controller__button--active">01</div>
+        <div id="2"  onclick="selectCarouselItem(this)" class="s-controller__button">02</div>
+        <div id="3"  onclick="selectCarouselItem(this)" class="s-controller__button">03</div>
+        
+        <div class="s-controller__line"></div>
+    </div>
 
     </div>
 
