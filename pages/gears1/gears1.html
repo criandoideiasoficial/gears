@@ -69,7 +69,7 @@
 
             </div>
             <div class="s-main-contant_bottom">
-                <div class="gallery">
+                <div id="gallery" class="gallery">
                     <ul>
                         <!-- data-fancybo e função que chama slide galaria do cdn fancybox -->
                         <li><a data-fancybox href="../../img/g1.jpg">
@@ -96,8 +96,16 @@
     </div>
     <!-- js para galeria -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script>
-        //  JavaScript will go here
+    
+      <script>
+        Fancybox.bind("#gallery a", {
+          groupAll : true, // Group all items
+          on : {
+            ready : (fancybox) => {
+              console.log(`fancybox #${fancybox.id} is ready!`);
+            }
+          }
+        });
       </script>
 
 </body>
